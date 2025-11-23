@@ -52,10 +52,8 @@ This dashboard includes **9 advanced interactive visualizations**:
 7. **Personality Profile & Box Plot**  
    Multi-filter analysis using Big Five personality traits (Conscientiousness, Agreeableness, Extraversion, Neuroticism, Openness). Compare filtered personality profiles against general population with side-by-side box plots. Includes radar chart showing personality profile shape.
 
-8. **Multi-Dimensional Heatmap & Treemap**  
-   Two views:
-   - **Density Heatmap (Bitmap)**: Choose any 2 dimensions (e.g., Year × Specialization) and see aggregate values (salary, GPA, Quant) with customizable aggregation (mean, max, min, count)
-   - **Treemap**: Hierarchical nested rectangles showing proportional data (e.g., Degree → Specialization → Gender)
+8. **Treemap**  
+   Hierarchical nested rectangles showing proportional data (e.g., Degree → Specialization → Gender). Choose any 2 dimensions and see aggregate values with customizable visualization.
 
 9. **360° Radar Chart**  
    Comprehensive candidate profile combining:
@@ -70,8 +68,9 @@ This dashboard includes **9 advanced interactive visualizations**:
 ## Local Setup
 
 ```bash
-# Clone or navigate to the project directory
-cd "Data Visulation Project"
+# Clone the repository
+git clone https://github.com/tibrahimumit/CEN445-Data-Visualization-Project.git
+cd CEN445-Data-Visualization-Project
 
 # Create virtual environment
 python3 -m venv .venv
@@ -85,16 +84,16 @@ pip install -r requirements.txt
 
 # Run the dashboard
 streamlit run app.py
+```
 
 ---
 
-'''
 ## Dataset
 
 - **Name**: Engineering Graduate Salary Dataset
 - **Source**: [Kaggle](https://www.kaggle.com/datasets/lovishbansal123/engineering-graduate-salary)
 - **Size**: 2,998 students with multiple features
-- **Column Counts**: 34 ccolumns
+- **Column Counts**: 34 columns
 - **Content**: Academic performance, skills, personality traits, college details, and salary information
 
 ---
