@@ -133,9 +133,9 @@ def main() -> None:
     with col8:
         st.markdown(
             """
-            ### 8. 🗺️ Multi-Dimensional Heatmap
+            ### 8. 🗺️ Treemap
             
-            Density heatmap (bitmap) + Treemap.
+            Hierarchical visualization of salary data.
             
             Choose any 2 dimensions (e.g., Year × Specialization) and see aggregate values.
             """
