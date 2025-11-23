@@ -104,8 +104,8 @@ def main():
 
     # Aggregate by specialization (base bar chart)
     spec_counts = (
-        df_filtered.groupby("Specialization")["ID"]
-        .count()
+        df_filtered.groupby("Specialization")
+        .size()
         .sort_values(ascending=False)
         .head(top_n)
         .rename("Students")
@@ -200,10 +200,10 @@ def main():
 
         # Aggregate
         metric_counts = (
-            df_metric.groupby(["Specialization", range_col])["ID"]
-            .count()
+            df_metric.groupby(["Specialization", range_col])
+            .size()
             .reset_index()
-            .rename(columns={"ID": "Students"})
+            .rename(columns={0: "Students"})
         )
 
         # Merge display names
