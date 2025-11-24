@@ -145,17 +145,17 @@ def main():
     st.title("🧬 Hybrid PCA Talent Map")
     st.markdown(
         """
-Bu sayfada mezunları **iki farklı PCA ekseninde** ve **K-Means kümeleriyle** inceliyoruz:
+This page analyzes graduates using **two different PCA axes** and **K-Means clustering**:
 
-- **X ekseni – Skill PCA1**: İngilizce, Mantık, Sayısal, Domain, Programlama ve GPA gibi
-  bilişsel + teknik yetenekleri tek bir eksende özetler.
-- **Y ekseni – Personal PCA1**: Kişilik (Big Five), okul seviyesi ve şehir tier'ı gibi
-  kişisel / arka plan özelliklerini tek eksende özetler.
+- **X-axis – Skill PCA1**: Summarizes cognitive + technical abilities (English, Logical, 
+  Quantitative, Domain, Programming, and GPA) on a single axis.
+- **Y-axis – Personal PCA1**: Summarizes personality traits (Big Five), college tier, 
+  and city tier on a single axis.
 
-Ek olarak:
-- 2D Hybrid PCA grafiğinde **cluster merkezleri (centroid)** gösterilir.
-- Tüm skill + personal özellikleri üzerinde hesaplanan **3D PCA scatter** grafiği ile
-  kümelerin uzaydaki ayrışması görselleştirilir.
+Additionally:
+- The 2D Hybrid PCA chart displays **cluster centroids**.
+- A **3D PCA scatter plot** computed over all skill + personal features visualizes 
+  cluster separation in space.
 """
     )
 
@@ -417,17 +417,17 @@ Ek olarak:
         skill_pc = row["Skill_PC1_mean"]
         pers_pc = row["Personal_PC1_mean"]
 
-        # Skill seviyesi yorumu
+        # Skill level interpretation
         if skill_pc >= 0:
-            skill_text = "skill seviyesi ortalamanın ÜSTÜ"
+            skill_text = "skill level ABOVE average"
         else:
-            skill_text = "skill seviyesi ortalamanın ALTINDA"
+            skill_text = "skill level BELOW average"
 
-        # Personal yorumu
+        # Personal interpretation
         if pers_pc >= 0:
-            personal_text = "kişilik / arka plan profili PCA1 ekseninde POZİTİF tarafa eğimli"
+            personal_text = "personality/background profile leans POSITIVE on PCA1 axis"
         else:
-            personal_text = "kişilik / arka plan profili PCA1 ekseninde NEGATİF tarafa eğimli"
+            personal_text = "personality/background profile leans NEGATIVE on PCA1 axis"
 
         line = (
             f"- **Cluster {cid}** → {skill_text}, {personal_text}."
@@ -438,12 +438,12 @@ Ek olarak:
 
     st.caption(
         """
-**Notlar:**
+**Notes:**
 
-- Skill PCA1 ve Personal PCA1 eksenleri yön olarak yorumlanmalıdır; **0** civarı veri setinin ortalama profilini temsil eder.
-- 2D grafikte centroidler kümelerin “merkez” konumunu gösterir; noktalara en yakın centroid'e göre cluster ataması yapılır.
-- 3D PCA, skill + personal tüm özellikleri aynı anda 3 boyuta indirger. Bu görselde küme sınırları 2D'ye göre daha net hissedilir.
-- Silhouette Score ~0.1–0.2 civarı değerler, kümelerin tamamen ayrık değil ama yine de anlamlı segmentler sunduğunu gösterir.
+- Skill PCA1 and Personal PCA1 axes should be interpreted directionally; **0** represents the average profile of the dataset.
+- In the 2D chart, centroids show the "center" position of clusters; cluster assignment is based on the nearest centroid.
+- 3D PCA reduces all skill + personal features to 3 dimensions simultaneously. Cluster boundaries are more distinct in this view compared to 2D.
+- Silhouette Score values around ~0.1–0.2 indicate that clusters are not fully separated but still offer meaningful segments.
 """
     )
 

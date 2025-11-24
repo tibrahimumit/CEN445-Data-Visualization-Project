@@ -73,10 +73,7 @@ def main() -> None:
             
             State-level choropleth of average salaries.
             
-            **Dynamic colors:**
-            - 🔵 Blue (male-only)
-            - 🩷 Pink (female-only)
-            - 🌈 Neutral (both)
+            Filter by degree, specialization, and gender to explore regional salary patterns.
             """
         )
     
@@ -97,7 +94,7 @@ def main() -> None:
     with col5:
         st.markdown(
             """
-            ### 5. 🧬 GPA & Skills Clustering
+            ### 5. 🧬 Correlation & Clustering Heatmap
             
             Correlation heatmap with hierarchical clustering.
             

@@ -139,7 +139,7 @@ def plot_parallel_coordinates(df: pd.DataFrame) -> None:
     )
 
     if len(df_filtered) > max_lines:
-        df_plot = df_filtered.sample(max_lines, random_state=42)
+        df_plot = df_filtered.sample(max_lines)
     else:
         df_plot = df_filtered
 

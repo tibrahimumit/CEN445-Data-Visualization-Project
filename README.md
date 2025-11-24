@@ -34,7 +34,7 @@ This dashboard includes **9 advanced interactive visualizations**:
 
 ### Advanced Analytics
 
-4. **GPA & Skills Clustering**  
+4. **Correlation & Clustering Heatmap**  
    Correlation heatmap with hierarchical clustering. Automatically groups related features (e.g., academic scores cluster together, aptitude tests form another block). Interactive feature selection and filter by Degree/Specialization.
 
 5. **K-Means Talent Clustering**  
@@ -111,7 +111,7 @@ streamlit run app.py
 ## Team Contributions
 
 - **İbrahim Ümit Taş**: Charts 1-3 (Parallel Coordinates, Sankey, India Map), Streamlit application integration and deployment, landing page design
-- **Emre Karaman**: Charts 4-6 (GPA Clustering Heatmap, K-Means Clustering, Bar Chart)
+- **Emre Karaman**: Charts 4-6 (Correlation Clustering Heatmap, K-Means Clustering, Bar Chart)
 - **Abdurrahman Gülmez**: Charts 7-9 (Box Plot, Heatmap/Treemap, Radar Chart), data preprocessing and cleaning
 - **Report Writing**: Collaborative effort by all team members
 

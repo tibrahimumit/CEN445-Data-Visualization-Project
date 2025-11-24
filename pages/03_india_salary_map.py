@@ -169,9 +169,8 @@ def main() -> None:
     st.plotly_chart(fig, use_container_width=True, config=config)
 
     st.caption(
-        "States are colored by average graduate salary. The color scale switches to blue "
-        "tones for male selections, pink tones for female selections, and a neutral palette "
-        "when both genders are included."
+        "States are colored by average graduate salary. "
+        "Use the filters above to explore different degree programs, specializations, and gender groups."
     )
 
 

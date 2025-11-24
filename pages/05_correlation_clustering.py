@@ -1,5 +1,5 @@
 """
-GPA & Skills Clustering Analysis
+Correlation & Clustering Heatmap
 
 Performs clustered correlation analysis on GPA, skills, academic scores
 and personality traits. Hierarchical clustering groups related features
@@ -39,14 +39,14 @@ def compute_clustered_order(corr_matrix: pd.DataFrame) -> list[str]:
 
 def main():
     st.set_page_config(
-        page_title="GPA & Skills Clustering",
+        page_title="Correlation & Clustering Heatmap",
         page_icon="🧬",
         layout="wide",
     )
 
     df = load_data()
 
-    st.title("🧬 GPA & Skills Clustering Analysis")
+    st.title("🧬 Correlation & Clustering Heatmap")
     st.markdown(
         """
         Clustered correlation heatmap for **academic scores, aptitude tests,
